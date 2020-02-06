@@ -118,3 +118,30 @@ public class Library {
 //    	    return DiffUtils.diff(original, revised, new MyersDiff<>());
 //    	}
 }
+
+
+implementation "io.github.java-diff-utils:java-diff-utils:4.5"
+
+
+
+
+
+
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/diff2html/2.12.2/diff2html-ui.min.js" integrity="sha256-08hEwaeqghdW6TAaEo1EGHDC/mrLMaWl6gRlMqV+54I=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/diff2html/2.12.2/diff2html.min.js" integrity="sha256-b/G7F0ILElfD0C/Hwrpr7pRhJy+tdJhO+PFhR1sbkjM=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/diff2html/2.12.2/diff2html.min.css" integrity="sha256-g/AR0iN639QFgl5CwIQoH9JOlWFuPJ2L9kRi+sKOmxA=" crossorigin="anonymous" />
+
+<script>
+var diffHtml = Diff2Html.getPrettyHtml(
+  '--- original-file.txt +++ new-file.txt @@ -1,2 +1,2 @@ -test 1 2 3 4 5 -raj dj file +test diwali 2 3 3 4  +asasa asas asas',
+  {inputFormat: 'diff', showFiles: true, matching: 'lines', outputFormat: 'side-by-side'}
+);
+document.getElementById("dest").innerHTML = diffHtml;
+</script>
+</head>
+<body>
+<div id="dest"></div>
+</body>
+</html>
